@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {createStore, bindActionCreators} from 'redux';
 import reducer from './reducer';
 import * as actions from './actions';
+import Counter from './Counter';
 
 const store = createStore(reducer);
 
