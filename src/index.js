@@ -12,19 +12,19 @@ const update = () => {
   document.getElementById('counter').textContent = getState().value;
 }
 subscribe(update);
- 
-document.getElementById('inc').addEventListener('click', () => {
-  dispatch(inc());
-})
 
-document.getElementById('dec').addEventListener('click', () => {
-  dispatch(dec());
-})
+const incDispatch = () => dispatch(inc());
+const decDispatch = () => dispatch(dec());
+const rndDispatch = (value) => dispatch(rnd(value));
+ 
+document.getElementById('inc').addEventListener('click', incDispatch)
+
+document.getElementById('dec').addEventListener('click', decDispatch)
 
 document.getElementById('rnd').addEventListener('click', () => {
   const value = Math.floor(Math.random() * 10);
-  dispatch(rnd(value)); 
-})
+  rndDispatch(value);
+} )
 
 console.log(store.getState());
 
