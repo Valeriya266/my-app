@@ -1,3 +1,5 @@
+import { connect } from "react-redux";
+
 const Counter = ({counter, inc, dec, rnd}) => {
     return (
         <div className="jumbotron">
@@ -9,4 +11,4 @@ const Counter = ({counter, inc, dec, rnd}) => {
     )
 }
 
-export default Counter;
+export default connect()(Counter);
