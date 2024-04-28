@@ -4,7 +4,7 @@ import {createStore, bindActionCreators} from 'redux';
 import reducer from './reducer';
 import * as actions from './actions';
 
-import Counter from './Counter';
+import Counter from './components/Counter';
 
 const store = createStore(reducer);
 
@@ -28,7 +28,7 @@ const update = () => {
           }}   
       />
     </React.StrictMode>
-  );
+  );s
 }
 
 update();
