@@ -1,7 +1,11 @@
 import { connect } from "react-redux";
 import * as actions from '../actions';
+import { useSelector } from "react-redux";
 
-const Counter = ({counter, inc, dec, rnd}) => {
+const Counter = () => {
+
+    const counter = useSelector(state => state.counter)
+
     return (
         <div className="jumbotron">
             <h1>{counter}</h1>
@@ -12,10 +16,11 @@ const Counter = ({counter, inc, dec, rnd}) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        counter: state.value
-    }
-}
+//const mapStateToProps = (state) => {
+    //return {
+        //counter: state.value
+    //}
+//}
 
-export default connect(mapStateToProps, actions)(Counter);
+//export default connect(mapStateToProps, actions)(Counter);
+export default Counter;
